@@ -14,6 +14,7 @@ public class Main {
     public static ObjectMapper mapper = new ObjectMapper();
 
     public static void main(String[] args) throws IOException {
+        String url = "https://raw.githubusercontent.com/netology-code/jd-homeworks/master/http/task1/cats";
         CloseableHttpClient httpClient = HttpClientBuilder.create()
                 .setDefaultRequestConfig(RequestConfig.custom()
                         .setConnectTimeout(5000)    // максимальное время ожидание подключения к серверу
@@ -22,7 +23,7 @@ public class Main {
                         .build())
                 .build();
 
-        HttpGet request = new HttpGet("https://raw.githubusercontent.com/netology-code/jd-homeworks/master/http/task1/cats");
+        HttpGet request = new HttpGet(url);
         CloseableHttpResponse response = httpClient.execute(request);
         InputStream content = (response.getEntity().getContent());
 
