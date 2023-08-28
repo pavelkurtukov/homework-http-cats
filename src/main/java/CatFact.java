@@ -8,16 +8,16 @@ public class CatFact {
     private final int upvotes;
 
     public CatFact(
-            @JsonProperty("id")
-            String id,
-            @JsonProperty("text")
-            String text,
-            @JsonProperty("type")
-            String type,
-            @JsonProperty("user")
-            String user,
-            @JsonProperty("upvotes")
-            int upvotes
+        @JsonProperty("id")
+        String id,
+        @JsonProperty("text")
+        String text,
+        @JsonProperty("type")
+        String type,
+        @JsonProperty("user")
+        String user,
+        @JsonProperty("upvotes")
+        int upvotes
     ) {
         this.id = id;
         this.text = text;
